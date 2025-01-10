@@ -1,0 +1,74 @@
+
+buildscript {
+    repositories {
+        mavenCentral()
+        google()
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.5.2'
+    }
+}
+
+apply plugin: 'com.android.library'
+
+group = 'dev.nullrobotics'
+version = '1.0-SNAPSHOT'
+
+
+android {
+    compileSdk 30
+
+    defaultConfig {
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+        namespace = "dev.nullrobotics"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    testOptions {
+        compileOptions {
+            sourceCompatibility JavaVersion.VERSION_11
+            targetCompatibility JavaVersion.VERSION_11
+        }
+    }
+}
+repositories {
+    mavenCentral()
+    google()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+
+    implementation 'com.google.code.gson:gson:2.11.0'
+    implementation group: 'org.joml', name: 'joml', version: '1.10.8'
+
+    implementation 'org.firstinspires.ftc:Inspection:10.1.1'
+    implementation 'org.firstinspires.ftc:Blocks:10.1.1'
+    implementation 'org.firstinspires.ftc:RobotCore:10.1.1'
+    implementation 'org.firstinspires.ftc:RobotServer:10.1.1'
+    implementation 'org.firstinspires.ftc:OnBotJava:10.1.1'
+    implementation 'org.firstinspires.ftc:Hardware:10.1.1'
+    implementation 'org.firstinspires.ftc:FtcCommon:10.1.1'
+    implementation 'org.firstinspires.ftc:Vision:10.1.1'
+}
+
