@@ -1,12 +1,12 @@
 // Copyright (c) Choreo contributors
 
-package dev.nullrobotics;
+package dev.nullrobotics.choreolib;
 
-import dev.nullrobotics.sample.SwerveSample;
-import dev.nullrobotics.trajectory.EventMarker;
-import dev.nullrobotics.trajectory.ProjectFile;
-import dev.nullrobotics.trajectory.Trajectory;
-import dev.nullrobotics.trajectory.TrajectorySample;
+import dev.nullrobotics.choreolib.sample.SwerveSample;
+import dev.nullrobotics.choreolib.trajectory.EventMarker;
+import dev.nullrobotics.choreolib.trajectory.ProjectFile;
+import dev.nullrobotics.choreolib.trajectory.Trajectory;
+import dev.nullrobotics.choreolib.trajectory.TrajectorySample;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonObject;

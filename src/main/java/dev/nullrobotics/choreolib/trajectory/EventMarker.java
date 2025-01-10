@@ -1,6 +1,6 @@
 // Copyright (c) Choreo contributors
 
-package dev.nullrobotics.trajectory;
+package dev.nullrobotics.choreolib.trajectory;
 
 import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonDeserializer;

@@ -1,10 +1,10 @@
-package dev.nullrobotics.sample;
+package dev.nullrobotics.choreolib.sample;
 
 import org.firstinspires.ftc.robotcore.external.navigation.AngleUnit;
 import org.firstinspires.ftc.robotcore.external.navigation.DistanceUnit;
 import org.firstinspires.ftc.robotcore.external.navigation.Pose2D;
 
-import dev.nullrobotics.trajectory.TrajectorySample;
+import dev.nullrobotics.choreolib.trajectory.TrajectorySample;
 
 /**
  * A single swerve robot sample in a Trajectory.

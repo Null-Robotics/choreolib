@@ -1,6 +1,6 @@
 // Copyright (c) Choreo contributors
 
-package dev.nullrobotics.trajectory;
+package dev.nullrobotics.choreolib.trajectory;
 
 import org.firstinspires.ftc.robotcore.external.navigation.DistanceUnit;
 import org.firstinspires.ftc.robotcore.external.navigation.Pose2D;
