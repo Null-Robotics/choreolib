@@ -1,0 +1,81 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        google()
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.5.2'
+    }
+}
+
+apply plugin: 'com.android.library'
+apply plugin: 'maven-publish'
+
+group = 'dev.nullrobotics'
+version = '1.0-SNAPSHOT'
+
+
+android {
+    compileSdk 30
+
+    defaultConfig {
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+        namespace = "dev.nullrobotics"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    testOptions {
+        compileOptions {
+            sourceCompatibility JavaVersion.VERSION_11
+            targetCompatibility JavaVersion.VERSION_11
+        }
+    }
+}
+repositories {
+    mavenCentral()
+    google()
+    maven {
+        url "https://repo.dairy.foundation/releases"
+    }
+}
+
+dependencies {
+    testImplementation platform(libs.junit)
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+
+    implementation libs.gson
+    implementation libs.joml
+
+    implementation libs.dairy
+    implementation libs.mercurial
+
+    implementation(project(":common"))
+
+    implementation libs.ftc.inspection
+    implementation libs.ftc.blocks
+    implementation libs.ftc.robotcore
+    implementation libs.ftc.server
+    implementation libs.ftc.obj
+    implementation libs.ftc.hw
+    implementation libs.ftc.common
+    implementation libs.ftc.vision
+}

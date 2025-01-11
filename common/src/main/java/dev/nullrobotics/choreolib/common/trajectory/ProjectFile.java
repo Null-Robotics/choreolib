@@ -1,6 +1,6 @@
 // Copyright (c) Choreo contributors
 
-package dev.nullrobotics.choreolib.trajectory;
+package dev.nullrobotics.choreolib.common.trajectory;
 
 import java.util.List;
 

@@ -56,19 +56,22 @@ repositories {
 }
 
 dependencies {
-    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation platform(libs.junit)
     testImplementation 'org.junit.jupiter:junit-jupiter'
 
-    implementation 'com.google.code.gson:gson:2.11.0'
-    implementation group: 'org.joml', name: 'joml', version: '1.10.8'
+    implementation libs.gson
+    implementation libs.joml
 
-    implementation 'org.firstinspires.ftc:Inspection:10.1.1'
-    implementation 'org.firstinspires.ftc:Blocks:10.1.1'
-    implementation 'org.firstinspires.ftc:RobotCore:10.1.1'
-    implementation 'org.firstinspires.ftc:RobotServer:10.1.1'
-    implementation 'org.firstinspires.ftc:OnBotJava:10.1.1'
-    implementation 'org.firstinspires.ftc:Hardware:10.1.1'
-    implementation 'org.firstinspires.ftc:FtcCommon:10.1.1'
-    implementation 'org.firstinspires.ftc:Vision:10.1.1'
+    implementation libs.ftc.lib
+
+    implementation(project(":common"))
+
+    implementation libs.ftc.inspection
+    implementation libs.ftc.blocks
+    implementation libs.ftc.robotcore
+    implementation libs.ftc.server
+    implementation libs.ftc.obj
+    implementation libs.ftc.hw
+    implementation libs.ftc.common
+    implementation libs.ftc.vision
 }
-
